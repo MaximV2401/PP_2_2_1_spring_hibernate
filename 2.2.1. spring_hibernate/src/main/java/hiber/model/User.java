@@ -11,7 +11,7 @@ public class User {
    private Long id;
 
 
-   @Column(name = "firstName")
+   @Column(name = "name")
    private String firstName;
 
    @Column(name = "last_name")
@@ -76,5 +76,15 @@ public class User {
 
    public Car getCar() {
       return car;
+   }
+
+   @Override
+   public String toString() {
+      return "User{" +
+              "firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' +
+              ", email='" + email + '\'' +
+              ", car=" + car +
+              '}';
    }
 }
